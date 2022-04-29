@@ -5,7 +5,7 @@ View this project live [on Heroku](https://unsplash-viewer.herokuapp.com/). Read
 
 <br>
 
-<img alt="project screenshot" src="https://i.imgur.com/oNw93MO.png" />
+<img alt="Project preview screenshot" src="https://i.imgur.com/Iiq1SZk.png" />
 
 ## Project overview
 This is a responsive website using ReactJS and the Unsplash API to view photography uploaded to Unsplash. The features it contains, are:
