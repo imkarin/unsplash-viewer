@@ -7,8 +7,8 @@ import theme from './theme.json'
 
 import GlobalStyles from './components/styles/Global.styled.js';
 import Header from './components/Header';
-import PhotoThumb from './components/PhotoThumb';
 import ContentGrid from './components/styles/ContentGrid.styles';
+import PhotoSection from './components/PhotoSection';
 
 const CLIENT_ID = '0d54d7bf8f81c9ee80a75d9e1263fbb6b8267fad9d908e597b9f7c4f6bcdee23';
 const BASE_URL = 'https://api.unsplash.com/'
@@ -41,13 +41,13 @@ function App() {
         <Header logo={logo} featuredPhoto={featured} handleSearch={handleSearch} />
 
         <main>
-          <ContentGrid>
-            <h2>Photos - {searchTerm}</h2>
-
-            { photosResult.map((photo, index) => (
-              <PhotoThumb photo={photo} key={index} />
-            ))}
-          </ContentGrid>
+          {
+            photosResult?.length > 0 ? (
+              <PhotoSection photos={photosResult} searchTerm={searchTerm} />
+            ) : (
+              <h2>No photos searched yet</h2>
+            )
+          }
         </main>
       </ThemeProvider>
     </div>
