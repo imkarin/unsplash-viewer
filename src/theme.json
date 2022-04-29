@@ -1,0 +1,51 @@
+{
+  "colors": {
+    "nightsky": "#030304",
+    "slate": "#363F3E",
+    "slateLight": "#9EA8AB",
+    "cloud": "#F8F9F9",
+    "cloudDark": "#E4E4E4"
+  },
+  "typography": {
+    "h1": {
+      "size": "33px",
+      "weight": "300" ,
+      "letterSpacing": "0.25px"
+    },
+    "h2": {
+      "size": "23px",
+      "weight": "500",
+      "letterSpacing": "0"
+    },
+    "h3": {
+      "size": "19px",
+      "weight": "600",
+      "letterSpacing": "0.15px"
+    },
+    "body": {
+      "size": "16px",
+      "weight": "400",
+      "letterSpacing": "0.5px"
+    },
+    "bodySmaller": {
+      "size": "14px",
+      "weight": "400",
+      "letterSpacing": "0.25px"
+    },
+    "button": {
+      "size": "14px",
+      "weight": "500",
+      "letterSpacing": "1.25px"
+    },
+    "caption": {
+      "size": "12px",
+      "weight": "400",
+      "letterSpacing": "0.4px"
+    },
+    "overline": {
+      "size": "10px",
+      "weight": "400",
+      "letterSpacing": "1.5px"
+    }
+  }
+}
