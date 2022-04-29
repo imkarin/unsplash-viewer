@@ -29,7 +29,6 @@ function App() {
       .then(photos => {
         setSearchTerm(searchTerm)
         setPhotosResult(photos)
-        console.log(photos)
       })
   }
 

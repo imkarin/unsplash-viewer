@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import arraySort from 'array-sort'
 import Masonry from 'react-masonry-css'
 import Select from 'react-select'
 
@@ -66,11 +67,19 @@ const breakpointCols = {
 const options = [
   { value: 'user', label: 'User' },
   { value: 'likes', label: 'Likes' },
-  { value: 'created at', label: 'Created at' },
+  { value: 'created_at', label: 'Created at' }
 ];
 
 const PhotoSection = ({photos, searchTerm}) => {
-  const [selectedOption, setSelectedOption] = useState(null)
+  const [photosSorted, setPhotosSorted] = useState(photos)
+  const [selectedSortOption, setSelectedSortOption] = useState(options[0])  
+  
+  function handleSortChange(chosenOption) {
+    const sort = chosenOption.value
+    setPhotosSorted(arraySort(photos.slice(), sort))
+    setSelectedSortOption(chosenOption)
+    console.log(photosSorted)
+  }
 
   return (
     <StyledPhotoSection>
@@ -79,8 +88,8 @@ const PhotoSection = ({photos, searchTerm}) => {
         <hr />
 
         <Select 
-          value={selectedOption} 
-          onChange={setSelectedOption} 
+          value={selectedSortOption} 
+          onChange={handleSortChange} 
           options={options} 
           placeholder='Sort photos'
         />
@@ -90,7 +99,7 @@ const PhotoSection = ({photos, searchTerm}) => {
           className='masonry-grid'
           columnClassName='masonry-grid_column'
         >
-          { photos.map((photo, index) => (
+          { photosSorted.map((photo, index) => (
             <PhotoThumb photo={photo} key={index} />
           ))}
         </Masonry>
