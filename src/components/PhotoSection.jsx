@@ -29,6 +29,7 @@ const StyledPhotoSection = styled.section`
       align-self: end;
     }
 
+    // Sort dropdown
     > div:not(.masonry-grid) {
       grid-column: 10 / -1;
       grid-row: 1 / 2;
@@ -51,6 +52,27 @@ const StyledPhotoSection = styled.section`
           width: 100%;
           margin: 0;
         }
+      }
+    }
+  }
+
+  // Smaller screens
+  @media screen and (max-width: 700px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    // ContentGrid
+    > div {
+      grid-template-rows: auto;
+
+      > hr {
+        grid-row: 3 / 4;
+      }
+      
+      // Sort dropdown
+      > div:not(.masonry-grid) {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
       }
     }
   }

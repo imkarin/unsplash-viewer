@@ -11,10 +11,11 @@ const StyledSearchBar = styled.form`
   > input {
     height: 100%;
     padding: 0 16px;
-
+    
     &[type=text] {
       flex-grow: 1;
       background-color: ${({theme}) => theme.colors.cloud};
+      overflow: hidden;
     }
 
     &[type=submit] {
@@ -36,7 +37,7 @@ const SearchBar = (props) => {
   return (
     <StyledSearchBar onSubmit={handleSubmit}>
       <input type='text' name='term' placeholder='Search free high-resolution photos'></input>
-      <input type='submit' value='Search photos' />
+      <input type='submit' value='Search' />
     </StyledSearchBar>
   )
 }

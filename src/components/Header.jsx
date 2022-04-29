@@ -69,6 +69,28 @@ const StyledHeader = styled.header`
       right: 0;
     }
   }
+
+  // Smaller screens
+  @media screen and (max-width: 700px) {
+    // Contentgrid
+    > div {
+      
+      > img {
+        justify-self: center;
+      }
+
+      // Searchbar placement
+      > form {
+        grid-column: 1 / -1;
+      }
+
+    }
+
+    // Remove all the white blocks
+      .white-block {
+      display: none;
+    }
+  }
 `
 
 const Header = (props) => {
