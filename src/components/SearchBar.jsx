@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledSearchBar = styled.form`
-  height: 56px;
+  height: 48px;
   background: transparent;
   display: flex;
   flex-direction: row;
@@ -18,7 +18,7 @@ const StyledSearchBar = styled.form`
     }
 
     &[type=submit] {
-      background-color: ${({theme}) => theme.colors.cloudDark};
+      background-color: ${({theme}) => theme.colors.cloud};
       text-transform: uppercase;
     }
   }

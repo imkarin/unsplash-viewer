@@ -35,16 +35,33 @@ const StyledHeader = styled.header`
       grid-column: 2 / -2; 
       grid-row: 1;
       align-self: end;
-      margin-bottom: 24px;
+      margin-bottom: 32px;
       z-index: 1; // temporary
+    }
+
+    > .white-block {
+      grid-row: 1;
+      grid-column: 1 / 2;
+      align-self: end;
+      margin-left: -32px;
+
+      :last-of-type {
+        grid-column: 12 / -1;
+        margin-right: -32px;
+        margin-left: 0;
+      }
     }
   }
 
+  // All white blocks
   .white-block {
     background: #fff;
-    grid-row: 1;
-    width: calc((100% - 1680px) / 2 + 206px);
     height: 80px;
+  }
+  
+  // White blocks outside of ContentGrid (to fill up the full width of the screen)
+  > .white-block {
+    width: calc((100% - 1680px) / 2);
     position: absolute;
     bottom: 0;
   
@@ -67,6 +84,9 @@ const Header = (props) => {
         <img src={props.logo} alt='Unsplash viewer logo' />
         <h1>Find the perfect image for your design</h1>
         <SearchBar />
+
+        <div className='white-block'></div>
+        <div className='white-block'></div>
       </ContentGrid>
 
       {/* Two white blocks: */}
