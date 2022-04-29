@@ -7,7 +7,6 @@ import theme from './theme.json'
 
 import GlobalStyles from './components/styles/Global.styled.js';
 import Header from './components/Header';
-import ContentGrid from './components/styles/ContentGrid.styles';
 import PhotoSection from './components/PhotoSection';
 
 const CLIENT_ID = '0d54d7bf8f81c9ee80a75d9e1263fbb6b8267fad9d908e597b9f7c4f6bcdee23';

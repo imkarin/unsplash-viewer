@@ -4,7 +4,7 @@ const PhotoThumb = ({photo}) => {
   return (
     <img 
       alt={photo.alt_description}
-      src={photo.urls.thumb}
+      src={photo.urls.regular}
     />
   )
 }
