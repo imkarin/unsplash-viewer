@@ -7,12 +7,15 @@ import theme from './theme.json'
 
 import GlobalStyles from './components/styles/Global.styled.js';
 import Header from './components/Header';
+import PhotoThumb from './components/PhotoThumb';
+import ContentGrid from './components/styles/ContentGrid.styles';
 
 const CLIENT_ID = '0d54d7bf8f81c9ee80a75d9e1263fbb6b8267fad9d908e597b9f7c4f6bcdee23';
 const BASE_URL = 'https://api.unsplash.com/'
 
 function App() {
   const [photosResult, setPhotosResult] = useState([])
+  const [searchTerm, setSearchTerm] = useState('')
   const [resultLimit, setResultLimit] = useState(20)
 
   async function searchPhotos(searchTerm, amount) {
@@ -24,6 +27,7 @@ function App() {
   async function handleSearch(searchTerm) {
     searchPhotos(searchTerm)
       .then(photos => {
+        setSearchTerm(searchTerm)
         setPhotosResult(photos)
         console.log(photos)
       })
@@ -36,13 +40,15 @@ function App() {
 
         <Header logo={logo} featuredPhoto={featured} handleSearch={handleSearch} />
 
-        { photosResult.map((photo, index) => (
-          <img 
-            key={index} 
-            alt={photo.alt_description}
-            src={photo.urls.thumb}
-          />
-        ))}
+        <main>
+          <ContentGrid>
+            <h2>Photos - {searchTerm}</h2>
+
+            { photosResult.map((photo, index) => (
+              <PhotoThumb photo={photo} key={index} />
+            ))}
+          </ContentGrid>
+        </main>
       </ThemeProvider>
     </div>
   );
