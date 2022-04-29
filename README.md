@@ -33,3 +33,6 @@ Time for code! I've committed often, and given my commits clear messages on what
 After 30 commits I was quite happy with the result I've delivered. An old friend is coming over and we're going to hang out for a while. But who knows, I might feel the urge to implement more functionalities later! 😏
 
 <br> 
+
+### ✨ 01:00 Code (Mobile styling)
+As predicted, I couldn't keep my hands off the project. The fact that the layout wasn't working on mobile (the usual: elements overflowing on the right) bothered me very much, so I decided to add some styling to make the app look good on small screens. That's it, I promise I won't touch it anymore! 🤞🏻
