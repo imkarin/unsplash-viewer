@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import arraySort from 'array-sort'
 import Masonry from 'react-masonry-css'
@@ -78,8 +78,12 @@ const PhotoSection = ({photos, searchTerm}) => {
     const sort = chosenOption.value
     setPhotosSorted(arraySort(photos.slice(), sort))
     setSelectedSortOption(chosenOption)
-    console.log(photosSorted)
   }
+
+  useEffect(() => {
+    setPhotosSorted(photos)
+  }, [photos])
+  
 
   return (
     <StyledPhotoSection>
