@@ -16,7 +16,7 @@ const BASE_URL = 'https://api.unsplash.com/'
 function App() {
   const [photosResult, setPhotosResult] = useState([])
   const [searchTerm, setSearchTerm] = useState('')
-  const [resultLimit, setResultLimit] = useState(20)
+  const [resultLimit, setResultLimit] = useState(70)
 
   async function searchPhotos(searchTerm, amount) {
     const res = await fetch(`${BASE_URL}/search/photos?query=${searchTerm}&per_page=${resultLimit}&client_id=${CLIENT_ID}`)

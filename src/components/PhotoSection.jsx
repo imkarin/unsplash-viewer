@@ -65,9 +65,9 @@ const breakpointCols = {
 
 // Dropdown (Sort) options
 const options = [
-  { value: 'user', label: 'User' },
-  { value: 'likes', label: 'Likes' },
-  { value: 'created_at', label: 'Created at' }
+  { value: 'user', label: 'Sort by: User' },
+  { value: 'likes', label: 'Sort by: Likes' },
+  { value: 'created_at', label: 'Sort by: Created at' }
 ];
 
 const PhotoSection = ({photos, searchTerm}) => {
