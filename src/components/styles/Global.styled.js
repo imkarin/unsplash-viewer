@@ -2,6 +2,8 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap');
+
   *, html {
     margin: 0;
     padding: 0;
@@ -35,10 +37,11 @@ const GlobalStyles = createGlobalStyle`
   
   // Typography based on theme
   h1 {
+    font-family: 'Lora', Helvetica, sans-serif;
     font-size: ${({theme}) => theme.typography.h1.size};
     font-weight: ${({theme}) => theme.typography.h1.weight};
     letter-spacing: ${({theme}) => theme.typography.h1.letterSpacing};
-    color: ${({theme}) => theme.colors.cloud};
+    color: ${({theme}) => theme.colors.nightsky};
   }
   
   h2 {

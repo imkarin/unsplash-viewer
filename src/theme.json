@@ -9,7 +9,7 @@
   "typography": {
     "h1": {
       "size": "33px",
-      "weight": "300" ,
+      "weight": "500" ,
       "letterSpacing": "0.25px"
     },
     "h2": {

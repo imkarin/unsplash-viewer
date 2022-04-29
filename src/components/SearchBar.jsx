@@ -14,11 +14,11 @@ const StyledSearchBar = styled.form`
 
     &[type=text] {
       flex-grow: 1;
-      background-color: #fff;
+      background-color: ${({theme}) => theme.colors.cloud};
     }
 
     &[type=submit] {
-      background-color: #e4e4e4;
+      background-color: ${({theme}) => theme.colors.cloudDark};
       text-transform: uppercase;
     }
   }
