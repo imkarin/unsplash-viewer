@@ -1,7 +1,7 @@
 # Unsplash viewer
 ReactJS based website for searching and viewing Unsplash images, using the Unsplash API. 
 
-View this project live [on Heroku](https://unsplash-viewer.herokuapp.com/).
+View this project live [on Heroku](https://unsplash-viewer.herokuapp.com/). Read along to see [the progress ↓](#progress) of this project.
 
 <br>
 
