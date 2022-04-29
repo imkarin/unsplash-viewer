@@ -9,18 +9,24 @@ import GlobalStyles from './components/styles/Global.styled.js';
 import Header from './components/Header';
 
 const CLIENT_ID = '0d54d7bf8f81c9ee80a75d9e1263fbb6b8267fad9d908e597b9f7c4f6bcdee23';
-const BASE_URL = 'https://api.unsplash.com/photos/'
+const BASE_URL = 'https://api.unsplash.com/'
 
 function App() {
-  async function searchPhotos(searchTerm) {
-    const res = await fetch(`${BASE_URL}?client_id=${CLIENT_ID}`)
+  const [photosResult, setPhotosResult] = useState([])
+  const [resultLimit, setResultLimit] = useState(20)
+
+  async function searchPhotos(searchTerm, amount) {
+    const res = await fetch(`${BASE_URL}/search/photos?query=${searchTerm}&per_page=${resultLimit}&client_id=${CLIENT_ID}`)
       .then(res => res.json())
-    return res
+    return res.results
   }
 
   async function handleSearch(searchTerm) {
     searchPhotos(searchTerm)
-      .then(photos => console.log(photos))
+      .then(photos => {
+        setPhotosResult(photos)
+        console.log(photos)
+      })
   }
 
   return (
@@ -29,6 +35,14 @@ function App() {
         <GlobalStyles />
 
         <Header logo={logo} featuredPhoto={featured} handleSearch={handleSearch} />
+
+        { photosResult.map((photo, index) => (
+          <img 
+            key={index} 
+            alt={photo.alt_description}
+            src={photo.urls.thumb}
+          />
+        ))}
       </ThemeProvider>
     </div>
   );
