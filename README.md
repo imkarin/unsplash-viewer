@@ -28,4 +28,4 @@ Time for code! I've committed often, and given my commits clear messages on what
 ### 🎉 20:00 Break time!
 After 30 commits I was quite happy with the result I've delivered. An old friend is coming over and we're going to hang out for a while. But who knows, I might feel the urge to implement more functionalities later! 😏
 
-<br>
+<br> 
