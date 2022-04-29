@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Masonry from 'react-masonry-css'
+import Select from 'react-select'
 
 import ContentGrid from './styles/ContentGrid.styles'
 import PhotoThumb from './PhotoThumb'
@@ -25,6 +26,11 @@ const StyledPhotoSection = styled.section`
       grid-row: 1 / 2;
       border-bottom: 1px solid ${({theme}) => theme.colors.cloudDark};
       align-self: end;
+    }
+
+    > div:not(.masonry-grid) {
+      grid-column: 10 / -1;
+      grid-row: 1 / 2;
     }
 
     > .masonry-grid {
@@ -56,12 +62,28 @@ const breakpointCols = {
   500: 1
 }
 
+// Dropdown (Sort) options
+const options = [
+  { value: 'user', label: 'User' },
+  { value: 'likes', label: 'Likes' },
+  { value: 'created at', label: 'Created at' },
+];
+
 const PhotoSection = ({photos, searchTerm}) => {
+  const [selectedOption, setSelectedOption] = useState(null)
+
   return (
     <StyledPhotoSection>
       <ContentGrid>
         <h2>Photos — {searchTerm} </h2>
         <hr />
+
+        <Select 
+          value={selectedOption} 
+          onChange={setSelectedOption} 
+          options={options} 
+          placeholder='Sort photos'
+        />
 
         <Masonry
         breakpointCols={breakpointCols}
