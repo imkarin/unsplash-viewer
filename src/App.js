@@ -16,7 +16,6 @@ function App() {
         <GlobalStyles />
 
         <Header logo={logo} featuredPhoto={featured} />
-        <SearchBar />
       </ThemeProvider>
     </div>
   );

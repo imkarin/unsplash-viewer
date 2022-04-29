@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ContentGrid from './styles/ContentGrid.styles'
+import SearchBar from './SearchBar'
 
 const StyledHeader = styled.header`
   position: relative;
@@ -15,7 +16,7 @@ const StyledHeader = styled.header`
   > div {
     height: 100%;
 
-    h1 {
+    > h1 {
       grid-row: 1;
       grid-column: 1 / -1 ;
       justify-self: center;
@@ -24,9 +25,18 @@ const StyledHeader = styled.header`
       text-align: center;
     }
     
-    img {
+    > img {
       position: absolute;
       top: 32px;
+    }
+
+    // Searchbar placement:
+    > form {
+      grid-column: 2 / -2; 
+      grid-row: 1;
+      align-self: end;
+      margin-bottom: 24px;
+      z-index: 1; // temporary
     }
   }
 
@@ -56,7 +66,7 @@ const Header = (props) => {
       <ContentGrid>
         <img src={props.logo} alt='Unsplash viewer logo' />
         <h1>Find the perfect image for your design</h1>
-        {/* Searchbar Component here */}
+        <SearchBar />
       </ContentGrid>
 
       {/* Two white blocks: */}
