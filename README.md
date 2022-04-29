@@ -1,20 +1,29 @@
 # Unsplash viewer
 ReactJS based website for searching and viewing Unsplash images, using the Unsplash API. 
 
-View this project live [on Heroku](https://unsplash-viewer.herokuapp.com/). Read along to see [the progress ↓](#progress) of this project.
+View this project live [on Heroku](https://unsplash-viewer.herokuapp.com/). Read along to see the project [overview & progress ↓](#project-overview) of this project.
 
 <br>
 
 <img alt="project screenshot" src="https://i.imgur.com/oNw93MO.png" />
 
+## Project overview
+This is a responsive website using ReactJS and the Unsplash API to view photography uploaded to Unsplash. The features it contains, are:
+* **Search bar** to search for photos by subject
+* **Sort functionality** to sort by user, likes and creation-date
+* **Hover** over photos to see some details
+* **Fully responsive**, the website looks great on mobile devices and large screens
+
+<br>
+
 ## Progress
-This is how I went about making this project:
+In total, I spent about 5.5 hours on this project — 4.5 of which coding. This is how I went about it:
 
 ### 🎨 14:30 Prototype
 To start off the Unsplash photoviewer assignment, I made myself a quick Figma prototype to work with. The prototype contained the following functionalities:
 * A searchbar
-* The search results: “No photos searched yet” / A 3-column grid that contained the search results
-* A sort-button that allows the user to sort between creation date, likes and user
+* The search results: “No photos searched yet” / A 4-column grid that contained the search results
+* A sort-button that allows the user to sort between creation-date, likes and user
 <br>
 
 ### 🔍 15:30 Reading Unsplash API docs & looking for useful packages
@@ -36,3 +45,5 @@ After 30 commits I was quite happy with the result I've delivered. An old friend
 
 ### ✨ 01:00 Code (Mobile styling)
 As predicted, I couldn't keep my hands off the project. The fact that the layout wasn't working on mobile (the usual: elements overflowing on the right) bothered me very much, so I decided to add some styling to make the app look good on small screens. That's it, I promise I won't touch it anymore! 🤞🏻
+
+<br>
