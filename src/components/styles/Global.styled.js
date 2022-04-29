@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
     letter-spacing: ${({theme}) => theme.typography.body.letterSpacing};
     color: ${({theme}) => theme.colors.slate};
     height: 100%;
+    overflow-x: hidden;
   }
 
   .app {
@@ -34,6 +35,12 @@ const GlobalStyles = createGlobalStyle`
     outline: none;
     cursor: pointer;
   }
+
+  // Sections
+  section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
   
   // Typography based on theme
   h1 {
@@ -49,6 +56,7 @@ const GlobalStyles = createGlobalStyle`
     font-weight: ${({theme}) => theme.typography.h2.weight};
     letter-spacing: ${({theme}) => theme.typography.h2.letterSpacing};
     color: ${({theme}) => theme.colors.nightsky};
+    grid-column: 1 / -1;
   }
 
   h3 {
