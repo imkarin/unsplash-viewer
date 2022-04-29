@@ -82,6 +82,7 @@ const PhotoSection = ({photos, searchTerm}) => {
 
   useEffect(() => {
     setPhotosSorted(photos)
+    setSelectedSortOption(options[0])
   }, [photos])
   
 
