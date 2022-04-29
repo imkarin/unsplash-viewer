@@ -24,17 +24,18 @@ const StyledSearchBar = styled.form`
   }
 `
 
-const SearchBar = () => {
+const SearchBar = (props) => {
   // Search bar will contain a small form with text field + button
   function handleSubmit(e) {
     e.preventDefault()
     const form = e.target
-    console.log(form.term.value)
+    const searchTerm = form.term.value
+    props.handleSearch(searchTerm)
   }
 
   return (
     <StyledSearchBar onSubmit={handleSubmit}>
-      <input type='text' name='term'></input>
+      <input type='text' name='term' placeholder='Search free high-resolution photos'></input>
       <input type='submit' value='Search photos' />
     </StyledSearchBar>
   )

@@ -12,16 +12,14 @@ const CLIENT_ID = '0d54d7bf8f81c9ee80a75d9e1263fbb6b8267fad9d908e597b9f7c4f6bcde
 const BASE_URL = 'https://api.unsplash.com/photos/'
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState('')
-
-  async function searchPhotos() {
+  async function searchPhotos(searchTerm) {
     const res = await fetch(`${BASE_URL}?client_id=${CLIENT_ID}`)
       .then(res => res.json())
     return res
   }
 
-  async function handleSearch() {
-    searchPhotos()
+  async function handleSearch(searchTerm) {
+    searchPhotos(searchTerm)
       .then(photos => console.log(photos))
   }
 
@@ -30,8 +28,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
 
-        <Header logo={logo} featuredPhoto={featured} />
-        <button onClick={handleSearch}>aaa</button>
+        <Header logo={logo} featuredPhoto={featured} handleSearch={handleSearch} />
       </ThemeProvider>
     </div>
   );

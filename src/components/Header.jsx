@@ -83,7 +83,8 @@ const Header = (props) => {
       <ContentGrid>
         <img src={props.logo} alt='Unsplash viewer logo' />
         <h1>Find the perfect image for your design</h1>
-        <SearchBar />
+
+        <SearchBar handleSearch={props.handleSearch} />
 
         <div className='white-block'></div>
         <div className='white-block'></div>
