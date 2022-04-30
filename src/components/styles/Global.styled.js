@@ -50,6 +50,12 @@ const GlobalStyles = createGlobalStyle`
     letter-spacing: ${({theme}) => theme.typography.h1.letterSpacing};
     color: ${({theme}) => theme.colors.nightsky};
   }
+
+  @media screen and (max-width: 700px) {
+    h1 {
+      font-size: 33px;
+    }
+  }
   
   h2 {
     font-size: ${({theme}) => theme.typography.h2.size};

@@ -37,7 +37,7 @@ const SearchBar = (props) => {
   return (
     <StyledSearchBar onSubmit={handleSubmit}>
       <input type='text' name='term' placeholder='Search free high-resolution photos'></input>
-      <input type='submit' value='Search' />
+      <input type='submit' value='Search photos' />
     </StyledSearchBar>
   )
 }
