@@ -1,7 +1,7 @@
 # Unsplash viewer
 ReactJS based website for searching and viewing Unsplash images, using the Unsplash API. 
 
-View this project live [on Heroku](https://unsplash-viewer.herokuapp.com/). Read along to see the project [overview & progress ↓](#project-overview) of this project.
+View this project live [on Heroku](https://unsplash-viewer.herokuapp.com/). Read along to see the project [overview & progress ↓](#project-overview). View the [Figma prototype](https://www.figma.com/file/SMwb0DRlr8SyI1n2Div1Kv/Unsplash-viewer?node-id=0%3A1).
 
 <br>
 
@@ -20,7 +20,7 @@ This is a responsive website using ReactJS and the Unsplash API to view photogra
 In total, I spent about 5.5 hours on this project — 4.5 of which coding. This is how I went about it:
 
 ### 🎨 14:30 Prototype
-To start off the Unsplash photoviewer assignment, I made myself a quick Figma prototype to work with. The prototype contained the following functionalities:
+To start off the Unsplash photoviewer assignment, I made myself a quick [Figma prototype](https://www.figma.com/file/SMwb0DRlr8SyI1n2Div1Kv/Unsplash-viewer?node-id=0%3A1) to work with. The prototype contained the following functionalities:
 * A searchbar
 * The search results: “No photos searched yet” / A 4-column grid that contained the search results
 * A sort-button that allows the user to sort between creation-date, likes and user
