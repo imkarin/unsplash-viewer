@@ -87,9 +87,9 @@ const breakpointCols = {
 
 // Dropdown (Sort) options
 const options = [
-  { value: 'user', label: 'Sort by: User' },
+  { value: 'user.username', label: 'Sort by: User' },
   { value: 'likes', label: 'Sort by: Likes' },
-  { value: 'created_at', label: 'Sort by: Created at' }
+  { value: 'user', label: 'Sort by: Created at' }
 ];
 
 const PhotoSection = ({photos, searchTerm}) => {
@@ -101,12 +101,18 @@ const PhotoSection = ({photos, searchTerm}) => {
     setPhotosSorted(arraySort(photos.slice(), sort))
     setSelectedSortOption(chosenOption)
   }
-
+  
   useEffect(() => {
-    setPhotosSorted(photos)
     setSelectedSortOption(options[0])
+    setPhotosSorted(arraySort(photos.slice(), selectedSortOption.value))
   }, [photos])
   
+  useEffect(() => {
+    console.log('Changes:')
+
+    const user = photosSorted.map(photo => photo.user.username)
+    console.log(user)
+  })
 
   return (
     <StyledPhotoSection>
@@ -115,6 +121,7 @@ const PhotoSection = ({photos, searchTerm}) => {
         <hr />
 
         <Select 
+          defaultValue={selectedSortOption}
           value={selectedSortOption} 
           onChange={handleSortChange} 
           options={options} 
