@@ -106,13 +106,6 @@ const PhotoSection = ({photos, searchTerm}) => {
     setSelectedSortOption(options[0])
     setPhotosSorted(arraySort(photos.slice(), selectedSortOption.value))
   }, [photos])
-  
-  useEffect(() => {
-    console.log('Changes:')
-
-    const user = photosSorted.map(photo => photo.user.username)
-    console.log(user)
-  })
 
   return (
     <StyledPhotoSection>
